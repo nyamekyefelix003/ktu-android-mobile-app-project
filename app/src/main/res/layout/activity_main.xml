@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F7F7FB"
+        android:paddingBottom="40dp"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/menu_icon"
+                app:tint="#000000" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/nofication_icon"
+                app:tint="#000000" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_image_background"
+                app:shapeAppearanceOverlay="@style/CircleImage" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello,"
+            android:textStyle="bold"
+            android:textColor="#7B1FA2"
+            android:layout_marginTop="18dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eminent Hucks 👋"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/search_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/search_icon"
+                app:tint="#9E9E9E" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="15dp"
+                android:text="Search for workouts, meals, plans..."
+                android:textColor="#9E9E9E"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/filter_icon"
+                app:tint="#212121" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/progress_card"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keep going!"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="You're doing &#10;great today 💪"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#B388FF" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="70% of daily goal completed"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:indicatorSize="120dp"
+                    app:indicatorColor="#ffffff"
+                    app:trackColor="#b288ff"
+                    app:indicatorDirectionCircular="clockwise"
+                    app:indicatorInset="0dp"
+                    app:indicatorTrackGapSize="0dp"
+                    android:progress="70"
+                    android:indeterminate="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="70%"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Actions"
+            android:layout_marginTop="29dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#212121"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/action_card"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@drawable/workouts_background">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/fitness_icon"
+                        app:tint="#7B2FF7"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Workouts"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/action_card"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@drawable/meal_background">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/meal_icon"
+                        app:tint="#36454F"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Meals"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/action_card"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@drawable/water_background">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:tint="#2E8B57"
+                        android:src="@drawable/water_icon"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Water"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/action_card"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@drawable/progress_background">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:tint="#A67C52"
+                        android:src="@drawable/progress_icon"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Progress"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today's Summary"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1E1B4B"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/summary_background">
+
+
+                    <LinearLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/fire_icon_background"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/fire_icon"
+                            app:tint="#2E8B57"/>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Calories"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="1,245 / 2,000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:text="kcal"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@drawable/summary_background">
+
+
+                    <LinearLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/time_icon_background"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/time_icon"
+                            app:tint="#7B2FF7"/>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Active Time"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="45 / 60"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:text="mins"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Upcoming Workouts"
+            android:textColor="#36454F"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View All"
+            android:textColor="#8B5CF6"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/workout_card"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <!-- Workout Image -->
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/yoga_background"
+                android:scaleType="centerCrop" />
+
+            <!-- Text Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Morning Yoga"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#36454F"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Today • 7:00 AM"
+                    android:textColor="#888888"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="30 mins"
+                    android:textColor="#8B5CF6"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Arrow Button -->
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/arrow_bg"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/play_icon"
+                    app:tint="#FFFFFF"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/workout_card"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <!-- Workout Image -->
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/yoga_background"
+                android:scaleType="centerCrop" />
+
+            <!-- Text Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Morning Yoga"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#36454F"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Today • 7:00 AM"
+                    android:textColor="#888888"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="30 mins"
+                    android:textColor="#8B5CF6"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Arrow Button -->
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/arrow_bg"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/play_icon"
+                    app:tint="#FFFFFF"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/workout_card"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <!-- Workout Image -->
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/yoga_background"
+                android:scaleType="centerCrop" />
+
+            <!-- Text Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Morning Yoga"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#36454F"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Today • 7:00 AM"
+                    android:textColor="#888888"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="30 mins"
+                    android:textColor="#8B5CF6"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Arrow Button -->
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/arrow_bg"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/play_icon"
+                    app:tint="#FFFFFF"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/workout_card"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <!-- Workout Image -->
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/yoga_background"
+                android:scaleType="centerCrop" />
+
+            <!-- Text Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Morning Yoga"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#36454F"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Today • 7:00 AM"
+                    android:textColor="#888888"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="30 mins"
+                    android:textColor="#8B5CF6"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Arrow Button -->
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/arrow_bg"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/play_icon"
+                    app:tint="#FFFFFF"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    
+
+</ScrollView>
